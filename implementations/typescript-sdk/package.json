@@ -1,0 +1,22 @@
+{
+  "name": "orders-ts",
+  "version": "1.0.0",
+  "description": "Reference TypeScript MCP SDK implementation: an order-processing server",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "client": "npm run build && node dist/client.js",
+    "test": "npm run build && vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
