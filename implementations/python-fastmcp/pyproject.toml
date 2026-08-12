@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orders"
+version = "1.0.0"
+description = "Reference FastMCP implementation: an order-processing server"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=3.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "uvicorn>=0.30",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orders"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
